@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Model Kit Gallery</title>
+        <link rel="stylesheet" href="project.css">
+    </head>
+    <body>
+        
+        <!--Contains Site Content-->
+        <div id="wrapper">
+
+            <!--Site Header-->
+            <header>
+                <a href="index.html"><h1>Model Kit Gallery</h1></a>
+            </header>
+            
+            <!--Navigation Link-->
+            <nav>
+                <a href="gundam.html">Gundam</a>
+                <a href="modelkit.html">Miscellaneous Model Kits</a>
+                <a href="WIP.html">Work-In-Progress Models</a>
+            </nav>
+
+            <main>
+
+                <!--Gallery Header-->
+                <h2 class="centeredHeader">Work-In-Progress Model Kits</h2>
+
+                <!--Gallery Navigation-->
+                <div class="navRow">
+                    <div class="navlogo"><a href="currentkit.html">Current Model Kit</a></div>
+                    <div class="navlogo"><a href="futurekits.html">Future Model Kits</a></div>
+                </div>
+
+                <h2 class="centeredHeader"> Click a link in one of the boxes above to be brought to that section of the gallery!</h2>
+
+                <!--Form Header-->
+                <h2 class="centeredHeader"> Suggest a Model Kit I should build!</h2>
+
+                <!--Form Container-->
+                <div class="container">
+                <!--Form-->
+                <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                    <!--Submit Field-->
+                    <input type="submit" id="submit" value="Submit">
+                    
+                    <!--Field for user's name-->
+                    <label for="myName">Name:</label>
+                    <input type="text" id="myName" name="myName" required>
+
+                    <!--Field for user's email-->
+                    <label for="myEmail">Email:</label>
+                    <input type="email" id="myEmail" name="myEmail" required>
+
+                    <!--Model Kit Name Field-->
+                    <label for="kitName">Model Kit Name:</label>
+                    <input type="text" id="kitName" name="kitName" required>
+
+                    <!--Model Kit Grade Fieldset-->
+                    <fieldset>
+                        <!--Fieldset legend-->
+                        <legend>Model Kit Grade (Choose One)</legend>
+
+                        <!--High Grade Option-->
+                        <label class="option" for="highGrade">
+                            <input type="checkbox" id="highGrade" name="modelGrade" value="High Grade">
+                            High Grade
+                        </label>
+
+                        <!--Real Grade Option-->
+                        <label class="option" for="realGrade">
+                            <input type="checkbox" id="realGrade" name="modelGrade" value="Real Grade">
+                            Real Grade
+                        </label>
+
+                        <!--Master Grade Option-->
+                        <label class="option" for="masterGrade">
+                            <input type="checkbox" id="masterGrade" name="modelGrade" value="Master Grade">
+                            Master Grade
+                        </label>
+
+                        <!--Perfect Grade Option-->
+                        <label class="option" for="perfectGrade">
+                            <input type="checkbox" id="perfectGrade" name="modelGrade" value="Perfect Grade">
+                            Perfect Grade
+                        </label>
+                    </fieldset>
+                </form>
+                </div>
+            </main>
+
+            <!--Site Footer-->
+            <footer>Copyright © 2025 Nathan Riley <br><a href="mailto:nriley5@my.westga.edu">nathan@riley.com</a></footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,376 @@
+* {box-sizing: border-box;}
+
+/* Body Style Elements*/
+body {
+    background-color: rgb(90, 82, 194);
+    color: black;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+/* Main Style Elements*/
+main {
+    padding-left: 0em;
+    padding-right: 0em;
+    padding-bottom: 2em;
+    border: 2px solid black;
+    display: block;
+}
+
+main h2, main p, main ul {
+    padding-left: 3em;
+    padding-right: 2em;
+} 
+
+/* Header Style Elements*/
+header {
+    background-image: url(images/websitelogo.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: left;
+    height: 135px;
+    color: black;
+    background-color: lightgrey;
+    border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    line-height: 67.5px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color:gold;
+}
+
+/* Footer Element*/
+footer {
+    background-color: lightgray;
+    font-size: .50em;
+    font-style: italic;
+    text-align: center;
+    border-top: 2px solid rgb(90, 82, 194);
+    padding: 1em;
+}
+
+/* Site Heading*/
+h1 {
+    font-size: 3em;
+}
+
+/* Shelf image*/
+#shelf {
+    background-image: url(images/shelf.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+/* Wrapper container style elements*/
+#wrapper {
+    width: 70%;
+    background-color: lightgrey;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Gallery subclass style elements*/
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thoughts {
+    margin-left: 40px;
+    width: 650px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.modelkit {
+    margin-right: 40px;
+}
+
+.modelkit img {
+    width: 300px;
+    height: auto;
+    float: right;
+    border: 4px solid black;
+}
+
+.statuemodel {
+    margin-right: 40px;
+}
+
+.statuemodel img {
+    width: 250px;
+    height: auto;
+    float: right;
+    border: 4px solid black;
+}
+
+.centeredHeader {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.centeredHeader a {
+    text-decoration: none;
+    color: black;
+}
+
+.centeredHeader a:hover {
+    color: gold;
+}
+
+.gallery {
+    display: inline-block;
+    border: 2px solid black;
+    margin: 8px;
+    width: 190px;
+    background-color: white;
+    
+}
+
+.gallery .description {
+    padding: 8px;
+    text-align: center;
+    background-color: white;
+}
+
+.gallery:hover {
+    border: 4px dashed gold;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation subclass element style*/
+.navRow {
+    display: flex;
+}
+
+.navlogo {
+    flex: 1;
+    height: 200px;
+    background-color: rgb(39, 38, 38);
+    border: 2px solid black;
+    color: gold;
+    text-align: center;
+}
+
+.navlogo a{
+    text-align: center;
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    line-height: 200px;
+}
+
+.navlogo a:hover {
+    color: white;
+}
+
+nav {
+    background-color: rgb(90, 82, 194);
+    min-height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+nav a {
+    outline: 2px solid black;
+    background-color: lightgrey;
+    color: black;
+    padding: 10px 20px;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+    color: gold;
+}
+
+/* Table Styling*/
+table {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+    background-color: rgb(90, 82, 194);
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgb(255, 241, 241);
+    color: red
+}
+
+tr:nth-of-type(even) {
+    background-color: lightgrey;
+    color: purple
+}
+
+/*Form Styling*/
+form { 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input {
+    margin-bottom: .5em;
+    border: 2px dashed rgb(90, 82, 194);
+}
+
+input[type="submit"] {
+    color: red;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 9em;
+}
+
+form label {
+    font-weight: bold;
+}
+
+/*Check Box Styling*/
+fieldset {
+    border: 5px dashed rgb(90, 82, 194);
+    padding: 15px;
+    max-width: 400px;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bolder;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive Design */
+
+/*Small Device Styling */
+@media screen and (max-width: 650px) {
+    #wrapper {
+        width: 95%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    header {
+        background-image: none;
+        height: auto;
+        text-align: center;
+        line-height: normal;
+        padding: 20px 10px;
+    }
+
+    .navRow {
+        flex-direction: column;
+    }
+
+    .navlogo {
+        height: auto;
+        line-height: normal;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1em;
+        line-height: normal;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thoughts, .modelkit, .statuemodel {
+        width: 90%;
+        margin: 10px 0px;
+    }
+
+    .modelkit img, .statuemodel img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+
+/* Medium Device Styling*/
+@media screen and (min-width: 600px) and (max-width: 1160px) {
+     @supports (display: grid) {
+        #wrapper {
+            width: 95%;
+            min-width: 0;
+            max-width: none;
+        }
+
+        header {
+            background-image: none;
+            height: auto;
+            text-align: center;
+            line-height: normal;
+            padding: 20px 10px;
+        }      
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thoughts, .modelkit, .statuemodel {
+            width: 90%;
+            margin: 10px 0px;
+        }
+
+        .modelkit img, .statuemodel img {
+            float: none;
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+        }
+
+        form {
+            width: 40%;
+            display: grid;
+            grid-template-columns: 6em 1fr;
+            grid-gap: 1em;
+        }
+
+        input[type="submit"] {
+            grid-column: 2;
+            width: 9em;
+        }
+
+        fieldset {
+            border: 5px dashed rgb(90, 82, 194);
+            padding: 15px;
+            max-width: 400px;
+            border-radius: 6px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
