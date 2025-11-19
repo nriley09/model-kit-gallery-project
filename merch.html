@@ -24,14 +24,57 @@
             </nav>
 
             <main>
-                <div class="container">
+                <!--Page Header-->
+                <h2 class="centeredHeader">Welcome to the merchandise page! </h2>
+
+                <!--Explains what's on the site-->
+                <p id="merchMessage">
+                    On this page you can find the three merch items I created to help support the site! The revenue gained from merchandise
+                    will go towards buying new model kits for the gallery. Purchases are appreciated, but not needed!
+                </p>
+
+                <!--Contains shirt content-->
+                <div class="merch">
+                    <img src="images/mkgshirt.png" alt="MKG Mascot Shirt">
+                    <h3>MKG Mascot Shirt</h3>
+                    <p>A plain white t-shirt that has the site's mascot on the center. More color variations coming soon! $15.99</p>
                     <button class="snipcart-add-item"
                     data-item-id="mkgshirt"
                     data-item-price="15.99"
                     data-item-description="A quality shirt with the MKG mascot"
-                    data-item-image="images/mkgshirt.jpg"
+                    data-item-image="images/mkgshirt.png"
                     data-item-name="MKG Mascot Shirt">
-                        Add to cart
+                        Buy Shirt
+                    </button>
+                </div>
+
+                <!--Contains Water Bottle Content-->
+                <div class="merch">
+                    <img src="images/mkgbottle.png" alt="MKG Mascot Bottle">
+                    <h3>MKG Mascot bottle</h3>
+                    <p>A clear 12 ounce bottle with the site's mascot. More color variations coming soon! $5.99</p>
+                    <button class="snipcart-add-item"
+                    data-item-id="mkgshirt"
+                    data-item-price="5.99"
+                    data-item-description="A 12 ounce bottle with the MKG mascot"
+                    data-item-image="images/mkgbottle.png"
+                    data-item-name="MKG Mascot Bottle">
+                        Buy Water Bottle
+                    </button>
+                </div>
+
+                <!--Contains Back Pack Content-->
+                <div class="merch">
+                    <img src="images/mkgbackpack.png" alt="MKG Mascot Backpack">
+                    <h3> MKG Mascot Backpack</h3>
+                    <p>A plain white backpack with the site's name and mascot. More color variations coming soon! $5.99</p>
+                    <button class="snipcart-add-item"
+                    data-item-id="mkgbackpack"
+                    data-item-price="18.99"
+                    data-item-description="A standard size backpack that has the MKG mascot and website name"
+                    data-item-image="images/mkgbackpack.png"
+                    data-item-name="MKG Mascot Backpack">
+                        Buy Backpack
                     </button>
                 </div>
             </main>
@@ -39,8 +82,10 @@
             <!--Site footer-->
             <footer>Copyright © 2025 Nathan Riley <br><a href="mailto:nriley5@my.westga.edu">nathan@riley.com</a></footer>
         </div>
+        <!--Snipcart container-->
         <div hidden id="snipcart" data-api-key="NzY3MGUwMTYtMzY1Zi00N2UyLWJiOTUtOTFjMTZhMzMyMzRjNjM4OTkwOTczMTAwNDk1ODI3"></div>
     </body>
+    <!--Snipcart javascript-->
     <script>
         window.SnipcartSettings = {
             publicApiKey: 'NzY3MGUwMTYtMzY1Zi00N2UyLWJiOTUtOTFjMTZhMzMyMzRjNjM4OTkwOTczMTAwNDk1ODI3',
@@ -51,5 +96,3 @@
     </script>
 
 </html>
-
-
