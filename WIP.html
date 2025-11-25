@@ -4,6 +4,42 @@
         <title>Model Kit Gallery</title>
         <link rel="stylesheet" href="project.css">
         <meta name="description" content="This is the work-in-progress hub! It contains navigation to the current kit I am working on, navigation to future kits, and a form for suggesting model kits.">
+        <script>
+            function validateForm() {
+                if (document.forms[0].myName.value == "") {
+                    alert("Name field cannot be empty.");
+                    return false;
+                }
+
+                if (document.forms[0].myEmail.value == "") {
+                    alert("Email field cannot be empty.");
+                    return false;
+                }
+
+                if (document.forms[0].kitName.value == "") {
+                    alert("Model kit name field cannot be empty.");
+                    return false;
+                }
+
+                const kitGrades = document.getElementsByName('modelGrade');
+                let isChecked = false;
+
+                for (let i = 0; i < kitGrades.length; i++) {
+                    if (kitGrades[i].checked) {
+                        isChecked = true;
+                        break;
+                    }
+                }
+
+                if (!isChecked) {
+                    alert ("Choose a grade for the model kit.")
+                    return false;
+                }
+
+                alert("Name, email, model kit name, and model kit grade are valid");
+                return true;
+            }
+        </script>
     </head>
     <body>
         
@@ -20,7 +56,6 @@
                 <a href="gundam.html">Gundam</a>
                 <a href="modelkit.html">Miscellaneous Model Kits</a>
                 <a href="WIP.html">Work-In-Progress Models</a>
-                <a href="merch.html">Merchandise</a>
             </nav>
 
             <main>
@@ -42,21 +77,21 @@
                 <!--Form Container-->
                 <div class="container">
                 <!--Form-->
-                <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <form method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm();">
                     <!--Submit Field-->
                     <input type="submit" id="submit" value="Submit">
                     
                     <!--Field for user's name-->
                     <label for="myName">Name:</label>
-                    <input type="text" id="myName" name="myName" required>
+                    <input type="text" id="myName" name="myName">
 
                     <!--Field for user's email-->
                     <label for="myEmail">Email:</label>
-                    <input type="email" id="myEmail" name="myEmail" required>
+                    <input type="email" id="myEmail" name="myEmail">
 
                     <!--Model Kit Name Field-->
                     <label for="kitName">Model Kit Name:</label>
-                    <input type="text" id="kitName" name="kitName" required>
+                    <input type="text" id="kitName" name="kitName">
 
                     <!--Model Kit Grade Fieldset-->
                     <fieldset>
@@ -65,26 +100,32 @@
 
                         <!--High Grade Option-->
                         <label class="option" for="highGrade">
-                            <input type="checkbox" id="highGrade" name="modelGrade" value="High Grade">
+                            <input type="radio" id="highGrade" name="modelGrade" value="High Grade">
                             High Grade
                         </label>
 
                         <!--Real Grade Option-->
                         <label class="option" for="realGrade">
-                            <input type="checkbox" id="realGrade" name="modelGrade" value="Real Grade">
+                            <input type="radio" id="realGrade" name="modelGrade" value="Real Grade">
                             Real Grade
                         </label>
 
                         <!--Master Grade Option-->
                         <label class="option" for="masterGrade">
-                            <input type="checkbox" id="masterGrade" name="modelGrade" value="Master Grade">
+                            <input type="radio" id="masterGrade" name="modelGrade" value="Master Grade">
                             Master Grade
                         </label>
 
                         <!--Perfect Grade Option-->
                         <label class="option" for="perfectGrade">
-                            <input type="checkbox" id="perfectGrade" name="modelGrade" value="Perfect Grade">
+                            <input type="radio" id="perfectGrade" name="modelGrade" value="Perfect Grade">
                             Perfect Grade
+                        </label>
+
+                        <!--Not Applicable Option-->
+                        <label class="option" for="notApplicable">
+                            <input type="radio" id="notApplicable" name="modelGrade" value="Not Applicable">
+                            N/A
                         </label>
                     </fieldset>
                 </form>
@@ -95,6 +136,4 @@
             <footer>Copyright © 2025 Nathan Riley <br><a href="mailto:nriley5@my.westga.edu">nathan@riley.com</a></footer>
         </div>
     </body>
-
 </html>
-
