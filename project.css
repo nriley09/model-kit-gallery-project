@@ -213,12 +213,12 @@ th, td {
 
 tr:nth-of-type(odd) {
     background-color: rgb(255, 241, 241);
-    color: red
+    color: blue;
 }
 
 tr:nth-of-type(even) {
     background-color: lightgrey;
-    color: purple
+    color: purple;
 }
 
 /*Form Styling*/
@@ -421,4 +421,5 @@ details p {
     }
 
 }
+
 
