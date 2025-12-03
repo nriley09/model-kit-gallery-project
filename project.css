@@ -136,6 +136,10 @@ h1 {
     
 }
 
+.gallery a {
+    text-decoration: none;
+}
+
 .gallery .description {
     padding: 8px;
     text-align: center;
@@ -421,5 +425,6 @@ details p {
     }
 
 }
+
 
 
