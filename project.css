@@ -314,8 +314,8 @@ details p {
 
 /* Responsive Design */
 
-/*Small Device Styling */
-@media screen and (max-width: 650px) {
+/*Shared small and medium device styling */
+@media screen and (max-width: 1160px) {
     #wrapper {
         width: 95%;
         min-width: 0;
@@ -324,26 +324,8 @@ details p {
 
     header {
         background-image: none;
-        height: auto;
         text-align: center;
-        line-height: normal;
         padding: 20px 10px;
-    }
-
-    .navRow {
-        flex-direction: column;
-    }
-
-    .navlogo {
-        height: auto;
-        line-height: normal;
-        padding: 10px 0;
-    }
-
-    nav a {
-        display: block;
-        font-size: 1em;
-        line-height: normal;
     }
 
     .container {
@@ -353,78 +335,57 @@ details p {
 
     .thoughts, .modelkit, .statuemodel {
         width: 90%;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
 
     .modelkit img, .statuemodel img {
-        float: none;
         display: block;
         margin: 10px auto;
         width: 80%;
+        float: none;
     }
 }
 
-/* Medium Device Styling*/
+/*Small Devices*/
+@media screen and (max-width: 599px) {
+    .navRow {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1em;
+    }
+
+    .navlogo {
+        padding: 10px 0;
+    }
+}
+
+/*Medium Devices*/
 @media screen and (min-width: 600px) and (max-width: 1160px) {
-     @supports (display: grid) {
-        #wrapper {
-            width: 95%;
-            min-width: 0;
-            max-width: none;
-        }
-
-        header {
-            background-image: none;
-            height: auto;
-            text-align: center;
-            line-height: normal;
-            padding: 20px 10px;
-        }      
-
-        .container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .thoughts, .modelkit, .statuemodel {
-            width: 90%;
-            margin: 10px 0px;
-        }
-
-        .modelkit img, .statuemodel img {
-            float: none;
-            display: block;
-            margin: 10px auto;
-            width: 80%;
-        }
-
-        form {
-            width: 40%;
-            display: grid;
-            grid-template-columns: 6em 1fr;
-            grid-gap: 1em;
-        }
-
-        input[type="submit"] {
-            grid-column: 2;
-            width: 9em;
-        }
-
-        fieldset {
-            border: 5px dashed rgb(90, 82, 194);
-            padding: 15px;
-            max-width: 400px;
-            border-radius: 6px;
-        }
-
-        .option {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    form {
+        width: 40%;
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        gap: 1em;
     }
 
+    input[type="submit"] {
+        grid-column: 2;
+        width: 9em;
+    }
+
+    fieldset {
+        border: 5px dashed rgb(90, 82, 194);
+        padding: 15px;
+        max-width: 400px;
+        border-radius: 6px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }
-
-
-
