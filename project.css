@@ -52,7 +52,7 @@ footer {
     font-size: .50em;
     font-style: italic;
     text-align: center;
-    border-top: 2px solid rgb(90, 82, 194);
+    border: 2px solid black;
     padding: 1em;
 }
 
@@ -396,4 +396,5 @@ details p {
         gap: 8px;
     }
 }
+
 
