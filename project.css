@@ -352,9 +352,16 @@ details p {
         flex-direction: column;
     }
 
+    nav {
+        width: 99.2%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
     nav a {
         display: block;
         font-size: 1em;
+        width: 100%;
     }
 
     .navlogo {
@@ -389,3 +396,4 @@ details p {
         gap: 8px;
     }
 }
+
